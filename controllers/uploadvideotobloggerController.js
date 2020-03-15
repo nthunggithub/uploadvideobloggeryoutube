@@ -25,7 +25,7 @@ function uploadtoggphotos(tenfile, imgpath) {
                 "albumId": changealbumId,
                 newMediaItems: [
                     {
-                        description: "Test Image Uploading",
+                        description: "Upload Video to Google Photos",
                         simpleMediaItem: {
                             uploadToken: body //Body is the upload token received from prev request
                         }
@@ -69,7 +69,7 @@ module.exports.uploadvideotoggphotos = async (req, res) => {
     }
     for (let i = 0; i < arr.length; i++) {
         const videoPath = pathUpload + "\\" + arr[i] + ".mp4";
-        let result = await uploadtoggphotos(arr[i] + ".mp4", videoPath);
+        let result = await uploadtoggphotos(arr[i].substring(0, 13) + ".mp4", videoPath);
         console.log(result);
         await sleep(1000);
     }

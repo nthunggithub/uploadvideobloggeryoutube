@@ -9,7 +9,7 @@ const multer = require("multer");
 let storage = multer.diskStorage({
   // Định nghĩa nơi file upload sẽ được lưu lại
   destination: (req, file, callback) => {
-    callback(null, path.join(`${__dirname}/../upload_file`));
+    callback(null, path.join(`${__dirname}/../../upload_file`));
   },
   filename: (req, file, callback) => {
     // ở đây các bạn có thể làm bất kỳ điều gì với cái file nhé.

@@ -1,7 +1,9 @@
 const  multipleUploadMiddleware = require('../middleware/mutilpleUploadMiddleware');
 let debug = console.log.bind(console);
 const fs = require('fs');
-const pathUpload = 'upload_file'
+const path = require("path");
+//const pathUpload = 'upload_file'
+const pathUpload = path.join(__dirname, '../../upload_file');
 let multipleUpload = async (req, res) => {
   try {
     // thực hiện upload

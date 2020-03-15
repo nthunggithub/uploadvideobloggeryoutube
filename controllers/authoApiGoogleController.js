@@ -3,15 +3,12 @@ const fs = require('fs');
 const token_ = 'token.json';
 
 var oauth2Client = new google.auth.OAuth2(
-    "300587230369-hr7ouon98mu9jcq8qh6eiip2t69sdcs1.apps.googleusercontent.com",
-    "AVx3YfbLF32fmDzQF53CMrVj",
-    ["http://localhost:3000/oauth2callback"]
+    
   );
-  
+  // 'https://www.googleapis.com/auth/youtube.upload',
+  // 'https://www.googleapis.com/auth/youtube',
+  //'https://www.googleapis.com/auth/blogger',
   const scopes = [
-    'https://www.googleapis.com/auth/youtube.upload',
-    'https://www.googleapis.com/auth/youtube',
-    'https://www.googleapis.com/auth/blogger',
     'https://www.googleapis.com/auth/photoslibrary',
     'profile',
   ];
