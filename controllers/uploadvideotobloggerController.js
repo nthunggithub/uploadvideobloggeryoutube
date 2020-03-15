@@ -68,7 +68,7 @@ module.exports.uploadvideotoggphotos = async (req, res) => {
         arr[i] = arr[i].substring(0, arr[i].length - 4);
     }
     for (let i = 0; i < arr.length; i++) {
-        const videoPath = pathUpload + "\\" + arr[i] + ".mp4";
+        const videoPath = pathUpload + "/" + arr[i] + ".mp4";
         let result = await uploadtoggphotos(arr[i].substring(0, 13) + ".mp4", videoPath);
         console.log(result);
         await sleep(1000);
